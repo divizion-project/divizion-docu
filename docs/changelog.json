@@ -1,0 +1,74 @@
+{
+    "meta": {
+        "id": "changelog",
+        "title": "Journal des Modifications",
+        "subtitle": "Historique des versions",
+        "description": "Liste chronologique des changements, améliorations et corrections de bugs.",
+        "coverImage": "/assets/images/docs/changelog.jpg",
+        "author": "Product Owner",
+        "lastUpdated": "2023-11-24",
+        "tags": [
+            "changelog",
+            "versions",
+            "news"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "v2.1.0 (2023-11-24)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Nouvelles fonctionnalités :",
+                    "bold": true
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Changements",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Dark Mode",
+                    "description": "Ajout du support natif pour le mode sombre."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Performance",
+                    "description": "Optimisation du temps de chargement de 30%."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "v2.0.5 (2023-11-10)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Corrections de bugs :",
+                    "bold": true
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "- Correction du crash lors de l'upload d'images > 5MB."
+                },
+                {
+                    "text": "- Fix de l'alignement sur mobile."
+                }
+            ]
+        }
+    ]
+}

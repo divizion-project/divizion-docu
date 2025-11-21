@@ -1,0 +1,82 @@
+{
+    "meta": {
+        "id": "troubleshooting",
+        "title": "Dépannage",
+        "subtitle": "Résolution des problèmes courants",
+        "description": "FAQ et solutions pour les erreurs fréquemment rencontrées.",
+        "coverImage": "/assets/images/docs/debug.jpg",
+        "author": "Support N2",
+        "lastUpdated": "2023-11-23",
+        "tags": [
+            "support",
+            "debug",
+            "faq"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Erreurs de Connexion"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Si vous rencontrez une erreur 503, vérifiez l'état des serveurs sur notre "
+                },
+                {
+                    "text": "page de statut",
+                    "link": "https://status.divizion.com",
+                    "color": "#3b82f6"
+                },
+                {
+                    "text": "."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Problèmes de Cache"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Parfois, un cache corrompu peut causer des problèmes d'affichage. Essayez de vider le cache de votre navigateur ou de l'application."
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Astuce",
+            "content": [
+                {
+                    "text": "Utilisez la commande "
+                },
+                {
+                    "text": "divizion clean",
+                    "bold": true
+                },
+                {
+                    "text": " pour nettoyer les fichiers temporaires locaux."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "center",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Contacter le Support",
+                    "icon": "mail",
+                    "action": "mailto:support@divizion.com",
+                    "variant": "primary"
+                }
+            ]
+        }
+    ]
+}

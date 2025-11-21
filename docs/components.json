@@ -1,0 +1,112 @@
+{
+    "meta": {
+        "id": "components",
+        "title": "Bibliothèque de Composants",
+        "subtitle": "Éléments UI réutilisables",
+        "description": "Catalogue des composants React disponibles dans le Design System.",
+        "coverImage": "/assets/images/docs/components.jpg",
+        "author": "Design Team",
+        "lastUpdated": "2023-11-15",
+        "tags": [
+            "ui",
+            "design-system",
+            "react"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Boutons"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Les boutons permettent de déclencher des actions. Ils existent en plusieurs variantes."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "left",
+            "buttons": [
+                {
+                    "type": "text",
+                    "label": "Primary",
+                    "action": "#",
+                    "variant": "primary"
+                },
+                {
+                    "type": "text",
+                    "label": "Secondary",
+                    "action": "#",
+                    "variant": "secondary"
+                },
+                {
+                    "type": "text",
+                    "label": "Outline",
+                    "action": "#",
+                    "variant": "outline"
+                },
+                {
+                    "type": "text",
+                    "label": "Ghost",
+                    "action": "#",
+                    "variant": "ghost"
+                },
+                {
+                    "type": "text",
+                    "label": "Danger",
+                    "action": "#",
+                    "variant": "danger"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Alertes"
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Info",
+            "content": [
+                {
+                    "text": "Ceci est une alerte informative."
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "success",
+            "title": "Succès",
+            "content": [
+                {
+                    "text": "L'opération a réussi !"
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "warning",
+            "title": "Attention",
+            "content": [
+                {
+                    "text": "Soyez prudent avec cette action."
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "danger",
+            "title": "Erreur",
+            "content": [
+                {
+                    "text": "Une erreur critique est survenue."
+                }
+            ]
+        }
+    ]
+}

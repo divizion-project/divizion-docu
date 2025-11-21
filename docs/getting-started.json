@@ -1,0 +1,90 @@
+{
+    "meta": {
+        "id": "getting-started",
+        "title": "Démarrage Rapide",
+        "subtitle": "Installez et configurez Divizion en moins de 5 minutes",
+        "description": "Guide complet pour télécharger, installer et lancer votre première instance de Divizion.",
+        "coverImage": "/assets/images/docs/getting-started.jpg",
+        "author": "Équipe Support",
+        "lastUpdated": "2023-11-22",
+        "tags": [
+            "installation",
+            "débutant",
+            "setup"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Bienvenue sur Divizion"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Divizion est une plateforme "
+                },
+                {
+                    "text": "révolutionnaire",
+                    "bold": true
+                },
+                {
+                    "text": " conçue pour simplifier vos workflows. Ce guide vous accompagnera étape par étape."
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Prérequis",
+            "content": [
+                {
+                    "text": "Assurez-vous d'avoir "
+                },
+                {
+                    "text": "Node.js 18+",
+                    "bold": true
+                },
+                {
+                    "text": " installé sur votre machine."
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Installation",
+            "description": "Suivez ces étapes pour installer le CLI.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Téléchargement",
+                    "description": "Téléchargez le binaire approprié pour votre OS depuis la page de téléchargement."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Configuration",
+                    "description": "Lancez l'installateur et suivez les instructions à l'écran."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Premier Lancement",
+                    "description": "Ouvrez votre terminal et tapez 'divizion start'."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "center",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Télécharger Maintenant",
+                    "icon": "download",
+                    "action": "/download",
+                    "variant": "primary"
+                }
+            ]
+        }
+    ]
+}
