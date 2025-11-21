@@ -163,6 +163,21 @@ Pour mettre en avant une information importante.
 }
 ```
 
+---
+
+#### **G. Bloc de Code (`code`)**
+
+Pour afficher du code ou des commandes avec coloration syntaxique et bouton de copie optionnel.
+
+```json
+{
+  "type": "code",
+  "language": "javascript", // "javascript", "python", "bash", "json", etc.
+  "content": "console.log('Hello World');",
+  "showCopyButton": true // Affiche un bouton pour copier le contenu
+}
+```
+
 ## Exemple Complet
 
 Voir le fichier `exemple_documentation.json` pour un exemple concret utilisant tous ces blocs ensemble.

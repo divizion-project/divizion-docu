@@ -1,0 +1,179 @@
+{
+    "meta": {
+        "id": "test-2-visual-layout",
+        "title": "Test 2: Images & Composants Interactifs",
+        "subtitle": "Test des médias et des listes d'étapes",
+        "description": "Ce document se concentre sur le rendu des images de différentes tailles, des groupes de boutons et des listes d'étapes complexes.",
+        "coverImage": "https://placehold.co/1200x400/2ecc71/ffffff?text=Test+2+Visual",
+        "author": "Design Bot",
+        "lastUpdated": "2025-11-21",
+        "tags": [
+            "test",
+            "images",
+            "layout"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Galerie d'Images de Test"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Voici une série d'images pour tester le responsive et les légendes."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "url": "https://placehold.co/800x400/3498db/ffffff?text=Image+Large+Full+Width",
+            "alt": "Image Large",
+            "caption": "Figure 1 : Une image large prenant toute la largeur",
+            "width": "full"
+        },
+        {
+            "type": "image",
+            "url": "https://placehold.co/400x400/e74c3c/ffffff?text=Image+Carrée",
+            "alt": "Image Carrée",
+            "caption": "Figure 2 : Une image carrée centrée",
+            "width": "standard"
+        },
+        {
+            "type": "image",
+            "url": "https://placehold.co/200x600/9b59b6/ffffff?text=Image+Verticale",
+            "alt": "Image Verticale",
+            "caption": "Figure 3 : Une image haute pour tester le scroll",
+            "width": "standard"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Groupes de Boutons Complexes"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Test d'alignement et de variantes de boutons."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "left",
+            "buttons": [
+                {
+                    "type": "text",
+                    "label": "Primaire Gauche",
+                    "action": "#",
+                    "variant": "primary"
+                },
+                {
+                    "type": "text",
+                    "label": "Secondaire Gauche",
+                    "action": "#",
+                    "variant": "secondary"
+                },
+                {
+                    "type": "text",
+                    "label": "Outline Gauche",
+                    "action": "#",
+                    "variant": "outline"
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "center",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Télécharger",
+                    "icon": "download",
+                    "action": "#",
+                    "variant": "primary"
+                },
+                {
+                    "type": "text_icon",
+                    "label": "GitHub",
+                    "icon": "github",
+                    "action": "#",
+                    "variant": "ghost"
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "right",
+            "buttons": [
+                {
+                    "type": "icon_only",
+                    "icon": "arrow-right",
+                    "action": "#",
+                    "variant": "primary"
+                },
+                {
+                    "type": "icon_only",
+                    "icon": "settings",
+                    "action": "#",
+                    "variant": "outline"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Liste d'Étapes Longue"
+        },
+        {
+            "type": "step_list",
+            "title": "Procédure d'Installation Complète",
+            "description": "Un guide étape par étape avec beaucoup d'étapes pour voir comment la liste se comporte.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Préparation de l'environnement",
+                    "description": "Assurez-vous d'avoir Node.js version 18 ou supérieure installé sur votre machine."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Clonage du dépôt",
+                    "description": "Utilisez git clone pour récupérer les sources du projet depuis le dépôt distant."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Installation des dépendances",
+                    "description": "Exécutez 'npm install' à la racine du projet. Cela peut prendre quelques minutes selon votre connexion."
+                },
+                {
+                    "step_number": 4,
+                    "title": "Configuration des variables d'environnement",
+                    "description": "Copiez le fichier .env.example vers .env et remplissez les clés d'API nécessaires."
+                },
+                {
+                    "step_number": 5,
+                    "title": "Lancement du serveur de développement",
+                    "description": "Tapez 'npm run dev' pour démarrer l'application en mode local."
+                },
+                {
+                    "step_number": 6,
+                    "title": "Vérification du build",
+                    "description": "Lancez 'npm run build' pour vous assurer que le projet compile correctement pour la production."
+                },
+                {
+                    "step_number": 7,
+                    "title": "Déploiement",
+                    "description": "Poussez vos modifications sur la branche main pour déclencher le déploiement automatique."
+                },
+                {
+                    "step_number": 8,
+                    "title": "Vérification finale",
+                    "description": "Accédez à l'URL de production et vérifiez que tout fonctionne comme prévu."
+                }
+            ]
+        }
+    ]
+}

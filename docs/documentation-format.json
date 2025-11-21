@@ -1,0 +1,420 @@
+{
+    "meta": {
+        "id": "documentation-format-reference",
+        "title": "Référence du Format de Documentation JSON",
+        "subtitle": "Guide complet pour la rédaction et la structuration de la documentation",
+        "description": "Ce document détaille de manière exhaustive la structure JSON utilisée par le système de documentation Divizion. Il couvre chaque type de bloc, les options de formatage, et les métadonnées requises.",
+        "coverImage": "https://placehold.co/1200x400/2c3e50/ffffff?text=JSON+Format+Reference",
+        "author": "Système",
+        "lastUpdated": "2025-11-21",
+        "tags": [
+            "référence",
+            "json",
+            "format",
+            "guide"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Introduction"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Le système de documentation de Divizion repose sur une structure de données "
+                },
+                {
+                    "text": "JSON (JavaScript Object Notation)",
+                    "bold": true
+                },
+                {
+                    "text": " stricte. Cette approche permet de séparer le fond de la forme, garantissant une cohérence visuelle parfaite à travers l'ensemble de la documentation. Chaque fichier de documentation est un objet JSON unique contenant des métadonnées et une liste séquentielle de blocs de contenu."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Structure Racine"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Le fichier JSON doit contenir deux clés principales à la racine :"
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Clés de la Racine",
+            "description": "Les propriétés obligatoires de l'objet racine.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "meta",
+                    "description": "Un objet contenant les informations descriptives du document (titre, auteur, date, etc.). Ces informations sont utilisées pour l'indexation, le référencement et l'affichage des en-têtes."
+                },
+                {
+                    "step_number": 2,
+                    "title": "blocks",
+                    "description": "Un tableau (array) ordonné d'objets. Chaque objet représente un bloc de contenu (paragraphe, titre, image, code, etc.) qui sera rendu séquentiellement dans la page."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "L'objet Meta"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "L'objet "
+                },
+                {
+                    "text": "meta",
+                    "bold": true,
+                    "color": "#3b82f6"
+                },
+                {
+                    "text": " définit l'identité du document. Voici ses propriétés :"
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "\"meta\": {\n    \"id\": \"identifiant-unique-du-doc\",\n    \"title\": \"Titre Principal du Document\",\n    \"subtitle\": \"Sous-titre explicatif (optionnel)\",\n    \"description\": \"Court résumé du contenu pour les aperçus.\",\n    \"coverImage\": \"/chemin/vers/image.jpg\",\n    \"author\": \"Nom de l'Auteur\",\n    \"lastUpdated\": \"YYYY-MM-DD\",\n    \"tags\": [\"tag1\", \"tag2\"]\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "alert",
+            "variant": "warning",
+            "title": "Identifiant Unique",
+            "content": [
+                {
+                    "text": "Le champ "
+                },
+                {
+                    "text": "id",
+                    "bold": true
+                },
+                {
+                    "text": " doit être unique à travers toute la documentation. Il est utilisé pour le routage et les liens internes. Utilisez des minuscules et des tirets (kebab-case)."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Les Blocs de Contenu"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Le tableau "
+                },
+                {
+                    "text": "blocks",
+                    "bold": true,
+                    "color": "#3b82f6"
+                },
+                {
+                    "text": " constitue le corps du document. Chaque élément de ce tableau doit posséder une propriété "
+                },
+                {
+                    "text": "type",
+                    "bold": true
+                },
+                {
+                    "text": " qui détermine son rendu et ses propriétés attendues."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "1. Titres (heading)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Utilisé pour structurer le document. Le niveau (level) correspond aux balises HTML h1 à h6."
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "{\n    \"type\": \"heading\",\n    \"level\": 2,\n    \"text\": \"Titre de la Section\"\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "2. Paragraphes (paragraph)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Le bloc de texte standard. Contrairement à une simple chaîne de caractères, le contenu est un tableau d'objets texte, permettant un formatage riche (gras, italique, liens, couleurs) au sein d'un même paragraphe."
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "{\n    \"type\": \"paragraph\",\n    \"content\": [\n        {\n            \"text\": \"Texte normal suivi de \"\n        },\n        {\n            \"text\": \"texte en gras\",\n            \"bold\": true\n        },\n        {\n            \"text\": \" et d'un lien.\",\n            \"link\": \"https://example.com\",\n            \"color\": \"#3b82f6\"\n        }\n    ]\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Options de Formatage de Texte"
+        },
+        {
+            "type": "step_list",
+            "title": "Propriétés de l'Objet Texte",
+            "description": "Attributs disponibles pour chaque segment de texte dans un paragraphe.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "text",
+                    "description": "(Requis) La chaîne de caractères à afficher."
+                },
+                {
+                    "step_number": 2,
+                    "title": "bold",
+                    "description": "(Booléen) Si true, le texte sera affiché en gras."
+                },
+                {
+                    "step_number": 3,
+                    "title": "italic",
+                    "description": "(Booléen) Si true, le texte sera affiché en italique."
+                },
+                {
+                    "step_number": 4,
+                    "title": "link",
+                    "description": "(Chaîne) URL de destination. Transforme le texte en lien hypertexte."
+                },
+                {
+                    "step_number": 5,
+                    "title": "color",
+                    "description": "(Chaîne) Code couleur hexadécimal (ex: #ff0000) pour colorer le texte."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "3. Images (image)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Permet d'insérer des visuels avec légende et texte alternatif."
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "{\n    \"type\": \"image\",\n    \"url\": \"/assets/images/schema.png\",\n    \"alt\": \"Description pour l'accessibilité\",\n    \"caption\": \"Figure 1 : Schéma explicatif\",\n    \"width\": \"standard\" \n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Largeur des Images",
+            "content": [
+                {
+                    "text": "La propriété "
+                },
+                {
+                    "text": "width",
+                    "bold": true
+                },
+                {
+                    "text": " accepte deux valeurs : "
+                },
+                {
+                    "text": "\"standard\"",
+                    "italic": true
+                },
+                {
+                    "text": " (largeur contrainte) ou "
+                },
+                {
+                    "text": "\"full\"",
+                    "italic": true
+                },
+                {
+                    "text": " (pleine largeur du conteneur)."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "4. Blocs de Code (code)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Affiche des extraits de code avec coloration syntaxique et bouton de copie optionnel."
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "{\n    \"type\": \"code\",\n    \"language\": \"javascript\",\n    \"content\": \"console.log('Hello World');\",\n    \"showCopyButton\": true\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "5. Alertes (alert)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Mise en avant d'informations importantes. Le contenu suit la même structure que les paragraphes (tableau d'objets texte)."
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "{\n    \"type\": \"alert\",\n    \"variant\": \"warning\",\n    \"title\": \"Attention\",\n    \"content\": [\n        { \"text\": \"Ceci est un avertissement important.\" }\n    ]\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Les variantes disponibles sont : "
+                },
+                {
+                    "text": "info, warning, error, success",
+                    "bold": true,
+                    "color": "#888888"
+                },
+                {
+                    "text": "."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "6. Groupes de Boutons (button_group)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Conteneur pour un ou plusieurs boutons d'action."
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "{\n    \"type\": \"button_group\",\n    \"alignment\": \"left\",\n    \"buttons\": [\n        {\n            \"type\": \"text_icon\",\n            \"label\": \"Télécharger\",\n            \"icon\": \"download\",\n            \"action\": \"/files/doc.pdf\",\n            \"variant\": \"primary\"\n        }\n    ]\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "step_list",
+            "title": "Configuration des Boutons",
+            "description": "Détails des propriétés pour les boutons.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "alignment",
+                    "description": "Alignement du groupe : 'left', 'center', ou 'right'."
+                },
+                {
+                    "step_number": 2,
+                    "title": "type (bouton)",
+                    "description": "Format du bouton : 'text' (texte seul), 'icon_only' (icône seule), ou 'text_icon' (texte et icône)."
+                },
+                {
+                    "step_number": 3,
+                    "title": "variant",
+                    "description": "Style visuel : 'primary' (plein), 'secondary' (gris), 'outline' (bordure), ou 'ghost' (transparent)."
+                },
+                {
+                    "step_number": 4,
+                    "title": "icon",
+                    "description": "Nom de l'icône (ex: 'download', 'github', 'arrow-right')."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "7. Listes d'Étapes (step_list)"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Idéal pour les tutoriels et les procédures séquentielles."
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "json",
+            "content": "{\n    \"type\": \"step_list\",\n    \"title\": \"Procédure d'Installation\",\n    \"description\": \"Suivez ces étapes pour installer le logiciel.\",\n    \"steps\": [\n        {\n            \"step_number\": 1,\n            \"title\": \"Téléchargement\",\n            \"description\": \"Téléchargez le binaire depuis le site officiel.\"\n        },\n        {\n            \"step_number\": 2,\n            \"title\": \"Exécution\",\n            \"description\": \"Lancez l'exécutable en tant qu'administrateur.\"\n        }\n    ]\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Bonnes Pratiques"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Pour garantir une documentation de qualité :"
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Règles d'Or",
+            "description": "À respecter lors de la rédaction.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Validation JSON",
+                    "description": "Vérifiez toujours la validité syntaxique de votre JSON avant de commiter. Une virgule manquante peut casser le rendu de la page."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Accessibilité",
+                    "description": "Remplissez toujours le champ 'alt' pour les images."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Concision",
+                    "description": "Utilisez les alertes et les listes pour briser la monotonie des longs paragraphes."
+                }
+            ]
+        }
+    ]
+}

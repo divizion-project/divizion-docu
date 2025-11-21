@@ -145,6 +145,39 @@
                     "text": "Tout document ne respectant pas la structure définie ci-dessus sera automatiquement rejeté par le pipeline de validation."
                 }
             ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Exemples de Code"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Le système supporte l'affichage de blocs de code avec coloration syntaxique :"
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "content": "function hello(name) {\n    console.log(`Bonjour ${name} !`);\n}",
+            "showCopyButton": true
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Ainsi que des commandes terminal :"
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "bash",
+            "content": "npm install divizion-docu --save",
+            "showCopyButton": true
         }
     ]
 }
