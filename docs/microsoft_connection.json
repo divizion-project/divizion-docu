@@ -1,0 +1,303 @@
+{
+    "meta": {
+        "id": "microsoft-auth-connection-v1",
+        "title": "Fixing Microsoft Connection Issues on the Launcher",
+        "subtitle": "Complete Guide to Set Up Microsoft Authenticator",
+        "description": "Documentation explaining how to resolve error 400 when connecting to your Microsoft account on the Divizion Launcher, using the Microsoft Authenticator app.",
+        "coverImage": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero-Desktop-M365-Premium-FY26HOL:VP5-1920x600",
+        "author": "Team Divizion",
+        "lastUpdated": "2025-12-23",
+        "tags": [
+            "microsoft",
+            "connection",
+            "authenticator",
+            "troubleshooting",
+            "launcher"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Microsoft Account Connection Issue"
+        },
+        {
+            "type": "alert",
+            "variant": "warning",
+            "title": "Error 400 - Connection Refused",
+            "content": [
+                {
+                    "text": "This error occurs because Microsoft now requires enhanced security authentication methods for third-party applications."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "url": "https://raw.githubusercontent.com/divizion-project/divizion-docu/refs/heads/main/images/Microsoft%20error%20400.webp",
+            "alt": "Screenshot of Microsoft error 400",
+            "caption": "Figure 1: Error message when attempting to connect",
+            "width": "full"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Understanding the Issue"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Microsoft recently decided to enforce enhanced security for connections to smaller applications. It is now "
+                },
+                {
+                    "text": "mandatory",
+                    "bold": true
+                },
+                {
+                    "text": " to use authentication methods with enhanced security."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Microsoft no longer allows the use of simple passwords for users to connect via third-party applications. The only accepted methods are:"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "• Confirmation code via SMS or email"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "• "
+                },
+                {
+                    "text": "Microsoft Authenticator",
+                    "bold": true
+                },
+                {
+                    "text": " app (recommended method)"
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Already configured?",
+            "content": [
+                {
+                    "text": "If you have already configured Microsoft Authenticator on your account, you can skip directly to Step 2: Connecting to the Launcher."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Step 1: Setting Up Microsoft Authenticator"
+        },
+        {
+            "type": "step_list",
+            "title": "Installing and configuring the app",
+            "description": "Follow these steps to configure Microsoft Authenticator on your Microsoft account.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Download Microsoft Authenticator",
+                    "description": "Install the Microsoft Authenticator app from the App Store (iOS) or Google Play Store (Android)."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Open the app",
+                    "description": "Once the app is downloaded and installed, open it on your mobile device."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Link your Microsoft account",
+                    "description": "Connect your Microsoft account to the app and enable sign-in from the app."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "center",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Download on Google Play",
+                    "icon": "android",
+                    "action": "https://play.google.com/store/apps/details?id=com.azure.authenticator&hl=en",
+                    "variant": "primary"
+                },
+                {
+                    "type": "text_icon",
+                    "label": "Download on App Store",
+                    "icon": "apple",
+                    "action": "https://apps.apple.com/app/microsoft-authenticator/id983156458",
+                    "variant": "primary"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Alternative Configuration via Microsoft Website"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "If configuration via the app fails, you can configure authentication directly from the "
+                },
+                {
+                    "text": "Microsoft security panel",
+                    "link": "https://account.live.com/proofs/manage",
+                    "color": "#3b82f6"
+                },
+                {
+                    "text": "."
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Procedure via Microsoft website",
+            "description": "Follow these steps if configuration via the app doesn't work.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Access the security panel",
+                    "description": "Go to the Microsoft account management site, then navigate to Security > More security options."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Add a sign-in method",
+                    "description": "Click on the button \"Add a new way to sign in or verify\"."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Select the app",
+                    "description": "In the popup that appears, click on \"Use an app\" then \"Quickly approve sign-in notifications on your phone\"."
+                },
+                {
+                    "step_number": 4,
+                    "title": "Follow the instructions",
+                    "description": "A window will open explaining how to configure the Microsoft Authenticator app. Follow the on-screen instructions."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "left",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Access Microsoft Security Panel",
+                    "icon": "external-link",
+                    "action": "https://account.live.com/proofs/manage",
+                    "variant": "outline"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Step 2: Connecting to the Launcher"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Once Microsoft Authenticator is configured, follow these steps to connect to the Divizion Launcher."
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Connection procedure",
+            "description": "Connect to your Microsoft account via the launcher using two-factor authentication.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Start the connection process",
+                    "description": "Click on the Microsoft sign-in button in the Divizion Launcher and enter your email address."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Avoid entering your password",
+                    "description": "If a window prompts you to enter your password, DO NOT ENTER IT. The probability that it will work is very low."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Choose app authentication",
+                    "description": "Click on one of the following options: \"Use my Microsoft app\", \"Use Microsoft Authenticator\", or \"Other way to sign in\"."
+                },
+                {
+                    "step_number": 4,
+                    "title": "Select Microsoft Authenticator",
+                    "description": "If you clicked on \"Other way to sign in\", select \"Sign in with Authenticator\" from the list of options."
+                },
+                {
+                    "step_number": 5,
+                    "title": "Validate the code",
+                    "description": "A code will appear on screen. Open the Microsoft Authenticator app on your phone, enter the same code and validate."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "url": "https://raw.githubusercontent.com/divizion-project/divizion-docu/refs/heads/main/images/Use%20MSAUTHAPP.webp",
+            "alt": "Selecting the Microsoft Authenticator option",
+            "caption": "Figure 2: Select the option to use Microsoft Authenticator",
+            "width": "full"
+        },
+        {
+            "type": "image",
+            "url": "https://raw.githubusercontent.com/divizion-project/divizion-docu/refs/heads/main/images/Use%20MSAUTHAPPCONFIRMWINDOW.webp",
+            "alt": "Confirmation window with code",
+            "caption": "Figure 3: Enter this code in your Microsoft Authenticator app",
+            "width": "full"
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Other sign-in methods",
+            "content": [
+                {
+                    "text": "If the Microsoft Authenticator option is not available, you can use other similar methods such as signing in with a code received on your phone or by email. These options are also very likely to work."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Connection Successful!"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Once the code is validated in the Microsoft Authenticator app, the connection should complete automatically and you will be signed in to your Microsoft account in the Divizion Launcher."
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "success",
+            "title": "Security Tip",
+            "content": [
+                {
+                    "text": "We strongly recommend never entering your password in unknown programs. Always prefer two-factor authentication via an app or message. This helps bypass keyloggers in malicious programs and protects your account."
+                }
+            ]
+        }
+    ]
+}
