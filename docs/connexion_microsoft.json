@@ -1,10 +1,10 @@
 {
     "meta": {
         "id": "microsoft-auth-connexion-v1",
-        "title": "Résoudre le problème de connexion Microsoft",
+        "title": "Résoudre le problème de connexion à Microsoft sur le Launcher",
         "subtitle": "Guide complet pour configurer Microsoft Authenticator",
         "description": "Documentation expliquant comment résoudre l'erreur 400 lors de la connexion à votre compte Microsoft sur le Divizion Launcher, en utilisant l'application Microsoft Authenticator.",
-        "coverImage": "./images/Microsoft error 400.webp",
+        "coverImage": "https://raw.githubusercontent.com/divizion-project/divizion-docu/refs/heads/main/images/Microsoft%20error%20400.webp",
         "author": "Team Divizion",
         "lastUpdated": "2025-12-23",
         "tags": [
@@ -33,7 +33,7 @@
         },
         {
             "type": "image",
-            "url": "/images/Microsoft error 400.webp",
+            "url": "https://raw.githubusercontent.com/divizion-project/divizion-docu/refs/heads/main/images/Microsoft%20error%20400.webp",
             "alt": "Capture d'écran de l'erreur Microsoft 400",
             "caption": "Figure 1 : Message d'erreur lors de la tentative de connexion",
             "width": "full"
@@ -254,14 +254,14 @@
         },
         {
             "type": "image",
-            "url": "/images/Use MSAUTHAPP.webp",
+            "url": "https://raw.githubusercontent.com/divizion-project/divizion-docu/refs/heads/main/images/Use%20MSAUTHAPP.webp",
             "alt": "Sélection de l'option Microsoft Authenticator",
             "caption": "Figure 2 : Sélectionnez l'option pour utiliser Microsoft Authenticator",
             "width": "full"
         },
         {
             "type": "image",
-            "url": "/images/Use MSAUTHAPPCONFIRMWINDOW.webp",
+            "url": "https://raw.githubusercontent.com/divizion-project/divizion-docu/refs/heads/main/images/Use%20MSAUTHAPPCONFIRMWINDOW.webp",
             "alt": "Fenêtre de confirmation avec code",
             "caption": "Figure 3 : Entrez ce code dans votre application Microsoft Authenticator",
             "width": "full"
