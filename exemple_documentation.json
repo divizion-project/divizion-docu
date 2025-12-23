@@ -178,6 +178,74 @@
             "language": "bash",
             "content": "npm install divizion-docu --save",
             "showCopyButton": true
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Images Incrustées"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Il est possible d'incruster des images directement dans le texte à l'aide de la balise "
+                },
+                {
+                    "text": "inline_image",
+                    "bold": true
+                },
+                {
+                    "text": ". Exemple : "
+                },
+                {
+                    "type": "inline_image",
+                    "src": "/assets/images/icons/info-icon.png",
+                    "alt": "Icône information",
+                    "width": 20,
+                    "height": 20
+                },
+                {
+                    "text": " Cette icône apparaît directement dans le flux du texte."
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Spécification inline_image",
+            "content": [
+                {
+                    "text": "La balise inline_image accepte les attributs suivants : "
+                },
+                {
+                    "text": "src",
+                    "bold": true
+                },
+                {
+                    "text": " (chemin de l'image), "
+                },
+                {
+                    "text": "alt",
+                    "bold": true
+                },
+                {
+                    "text": " (texte alternatif), "
+                },
+                {
+                    "text": "width",
+                    "bold": true
+                },
+                {
+                    "text": " et "
+                },
+                {
+                    "text": "height",
+                    "bold": true
+                },
+                {
+                    "text": " (dimensions en pixels, optionnels)."
+                }
+            ]
         }
     ]
 }
