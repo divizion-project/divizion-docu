@@ -1,0 +1,303 @@
+{
+    "meta": {
+        "id": "microsoft-auth-connexion-v1",
+        "title": "Résoudre le problème de connexion Microsoft",
+        "subtitle": "Guide complet pour configurer Microsoft Authenticator",
+        "description": "Documentation expliquant comment résoudre l'erreur 400 lors de la connexion à votre compte Microsoft sur le Divizion Launcher, en utilisant l'application Microsoft Authenticator.",
+        "coverImage": "/images/Microsoft error 400.webp",
+        "author": "Équipe Divizion",
+        "lastUpdated": "2023-12-23",
+        "tags": [
+            "microsoft",
+            "connexion",
+            "authenticator",
+            "dépannage",
+            "launcher"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Problème de connexion au compte Microsoft"
+        },
+        {
+            "type": "alert",
+            "variant": "warning",
+            "title": "Erreur 400 - Connexion refusée",
+            "content": [
+                {
+                    "text": "Cette erreur survient car Microsoft exige désormais des méthodes de connexion à sécurité renforcée pour les applications tierces."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "url": "/images/Microsoft error 400.webp",
+            "alt": "Capture d'écran de l'erreur Microsoft 400",
+            "caption": "Figure 1 : Message d'erreur lors de la tentative de connexion",
+            "width": "full"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Comprendre l'origine du problème"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Microsoft a récemment pris la décision de renforcer la sécurité des connexions pour les petites applications. Il est maintenant "
+                },
+                {
+                    "text": "obligatoire",
+                    "bold": true
+                },
+                {
+                    "text": " d'utiliser des méthodes de connexion avec sécurité renforcée."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Microsoft n'autorise plus l'utilisation de mots de passe simples pour permettre aux utilisateurs de se connecter via des applications tierces. Les seules méthodes acceptées sont :"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "• Code de confirmation par SMS ou email"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "• Application "
+                },
+                {
+                    "text": "Microsoft Authenticator",
+                    "bold": true
+                },
+                {
+                    "text": " (méthode recommandée)"
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Déjà configuré ?",
+            "content": [
+                {
+                    "text": "Si vous avez déjà configuré Microsoft Authenticator sur votre compte, vous pouvez directement passer à l'Étape 2 : Connexion au Launcher."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Étape 1 : Configuration de Microsoft Authenticator"
+        },
+        {
+            "type": "step_list",
+            "title": "Installation et configuration de l'application",
+            "description": "Suivez ces étapes pour configurer Microsoft Authenticator sur votre compte Microsoft.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Télécharger Microsoft Authenticator",
+                    "description": "Installez l'application Microsoft Authenticator depuis l'App Store (iOS) ou le Google Play Store (Android)."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Ouvrir l'application",
+                    "description": "Une fois l'application téléchargée et installée, ouvrez-la sur votre appareil mobile."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Lier votre compte Microsoft",
+                    "description": "Connectez votre compte Microsoft à l'application et activez la connexion depuis l'app."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "center",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Télécharger sur Google Play",
+                    "icon": "android",
+                    "action": "https://play.google.com/store/apps/details?id=com.azure.authenticator&hl=fr",
+                    "variant": "primary"
+                },
+                {
+                    "type": "text_icon",
+                    "label": "Télécharger sur App Store",
+                    "icon": "apple",
+                    "action": "https://apps.apple.com/fr/app/microsoft-authenticator/id983156458",
+                    "variant": "primary"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Configuration alternative depuis le site Microsoft"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "En cas d'échec de la configuration via l'application, vous pouvez configurer l'authentification directement depuis le "
+                },
+                {
+                    "text": "panneau de sécurité Microsoft",
+                    "link": "https://account.live.com/proofs/manage",
+                    "color": "#3b82f6"
+                },
+                {
+                    "text": "."
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Procédure via le site Microsoft",
+            "description": "Suivez ces étapes si la configuration via l'application ne fonctionne pas.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Accéder au panneau de sécurité",
+                    "description": "Rendez-vous sur le site de gestion de compte Microsoft, puis dans Sécurité > Autres options de sécurité."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Ajouter une méthode de connexion",
+                    "description": "Cliquez sur le bouton « Ajoutez un autre moyen de vous connecter à votre compte »."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Sélectionner l'application",
+                    "description": "Dans la popup qui apparaît, cliquez sur « Utiliser une application » puis « Approuvez rapidement les notifications de connexion sur votre téléphone »."
+                },
+                {
+                    "step_number": 4,
+                    "title": "Suivre les instructions",
+                    "description": "Une fenêtre va s'ouvrir vous expliquant comment configurer l'application Microsoft Authenticator. Suivez les instructions à l'écran."
+                }
+            ]
+        },
+        {
+            "type": "button_group",
+            "alignment": "left",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Accéder au panneau de sécurité Microsoft",
+                    "icon": "external-link",
+                    "action": "https://account.live.com/proofs/manage",
+                    "variant": "outline"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "Étape 2 : Connexion au Launcher"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Une fois Microsoft Authenticator configuré, suivez ces étapes pour vous connecter au Divizion Launcher."
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Procédure de connexion",
+            "description": "Connectez-vous à votre compte Microsoft via le launcher en utilisant l'authentification à deux facteurs.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Lancer le processus de connexion",
+                    "description": "Cliquez sur le bouton de connexion Microsoft dans le Divizion Launcher et entrez votre adresse email."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Éviter la saisie du mot de passe",
+                    "description": "Si une fenêtre vous invite à entrer votre mot de passe, NE L'ENTREZ PAS. La probabilité que cela fonctionne est très faible."
+                },
+                {
+                    "step_number": 3,
+                    "title": "Choisir l'authentification par application",
+                    "description": "Cliquez sur l'un des intitulés suivants : « Utiliser mon application Microsoft », « Utiliser Microsoft Authenticator », ou « Autre moyen de connexion »."
+                },
+                {
+                    "step_number": 4,
+                    "title": "Sélectionner Microsoft Authenticator",
+                    "description": "Si vous avez cliqué sur « Autre moyen de connexion », sélectionnez « Connexion avec Authenticator » dans la liste des options."
+                },
+                {
+                    "step_number": 5,
+                    "title": "Valider le code",
+                    "description": "Un code va apparaître à l'écran. Ouvrez l'application Microsoft Authenticator sur votre téléphone, entrez le même code et validez."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "url": "/images/Use MSAUTHAPP.webp",
+            "alt": "Sélection de l'option Microsoft Authenticator",
+            "caption": "Figure 2 : Sélectionnez l'option pour utiliser Microsoft Authenticator",
+            "width": "full"
+        },
+        {
+            "type": "image",
+            "url": "/images/Use MSAUTHAPPCONFIRMWINDOW.webp",
+            "alt": "Fenêtre de confirmation avec code",
+            "caption": "Figure 3 : Entrez ce code dans votre application Microsoft Authenticator",
+            "width": "full"
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Autres méthodes de connexion",
+            "content": [
+                {
+                    "text": "Si l'option Microsoft Authenticator n'est pas disponible, vous pouvez utiliser d'autres méthodes similaires comme la connexion avec un code reçu sur votre téléphone ou par email. Ces options ont de grandes chances de fonctionner également."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Connexion réussie !"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Une fois le code validé dans l'application Microsoft Authenticator, la connexion devrait s'effectuer automatiquement et vous serez connecté à votre compte Microsoft dans le Divizion Launcher."
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "success",
+            "title": "Astuce de sécurité",
+            "content": [
+                {
+                    "text": "Nous vous recommandons fortement de ne jamais entrer votre mot de passe sur des programmes inconnus. Privilégiez toujours l'authentification à deux facteurs via une application ou par message. Cela permet de contourner les keyloggers présents dans les programmes malveillants et de protéger votre compte."
+                }
+            ]
+        }
+    ]
+}
