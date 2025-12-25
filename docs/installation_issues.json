@@ -40,7 +40,7 @@
             "title": "Error Message",
             "content": [
                 {
-                    "text": "\"DivizionLauncher.app\" is damaged and can't be opened. You should move it to the Trash."
+                    "text": "\"Divizion Launcher.app\" is damaged and can't be opened. You should move it to the Trash."
                 }
             ]
         },
@@ -58,7 +58,7 @@
             "title": "Alternative Error Message",
             "content": [
                 {
-                    "text": "\"DivizionLauncher.app\" cannot be opened because Apple cannot verify that it doesn't contain malicious software."
+                    "text": "\"Divizion Launcher.app\" cannot be opened because Apple cannot verify that it doesn't contain malicious software."
                 }
             ]
         },
@@ -165,7 +165,7 @@
         {
             "type": "code",
             "language": "bash",
-            "content": "xattr -cr /Applications/DivizionLauncher.app",
+            "content": "xattr -cr /Applications/Divizion\\ Launcher.app",
             "showCopyButton": true
         },
         {
@@ -187,7 +187,7 @@
         {
             "type": "code",
             "language": "bash",
-            "content": "xattr -cr ~/Downloads/DivizionLauncher.app",
+            "content": "xattr -cr ~/Downloads/Divizion\\ Launcher.app",
             "showCopyButton": true
         },
         {
@@ -441,7 +441,7 @@
                     "bold": true
                 },
                 {
-                    "text": " The Divizion Launcher is an open-source project whose source code is publicly available on GitHub. The security warnings are not due to the presence of malware, but simply because the application is not signed with an official certificate (which costs several hundred euros per year)."
+                    "text": " The Divizion Launcher is developed by a trusted team. The security warnings are not due to the presence of malware, but simply because the application is not signed with an official certificate (which costs several hundred euros per year)."
                 }
             ]
         },

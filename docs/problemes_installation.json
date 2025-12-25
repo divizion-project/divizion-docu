@@ -40,7 +40,7 @@
             "title": "Message d'erreur",
             "content": [
                 {
-                    "text": "\"DivizionLauncher.app\" est endommagé et ne peut pas être ouvert. Vous devriez le déplacer vers la Corbeille."
+                    "text": "\"Divizion Launcher.app\" est endommagé et ne peut pas être ouvert. Vous devriez le déplacer vers la Corbeille."
                 }
             ]
         },
@@ -58,7 +58,7 @@
             "title": "Message d'erreur alternatif",
             "content": [
                 {
-                    "text": "\"DivizionLauncher.app\" ne peut pas être ouvert car Apple n'a pas pu vérifier qu'il ne contient pas de logiciels malveillants."
+                    "text": "\"Divizion Launcher.app\" ne peut pas être ouvert car Apple n'a pas pu vérifier qu'il ne contient pas de logiciels malveillants."
                 }
             ]
         },
@@ -165,7 +165,7 @@
         {
             "type": "code",
             "language": "bash",
-            "content": "xattr -cr /Applications/DivizionLauncher.app",
+            "content": "xattr -cr /Applications/Divizion\\ Launcher.app",
             "showCopyButton": true
         },
         {
@@ -187,7 +187,7 @@
         {
             "type": "code",
             "language": "bash",
-            "content": "xattr -cr ~/Downloads/DivizionLauncher.app",
+            "content": "xattr -cr ~/Downloads/Divizion\\ Launcher.app",
             "showCopyButton": true
         },
         {
@@ -441,7 +441,7 @@
                     "bold": true
                 },
                 {
-                    "text": " Le Divizion Launcher est un projet open-source dont le code source est publiquement disponible sur GitHub. Les avertissements de sécurité ne sont pas dus à la présence de logiciels malveillants, mais simplement au fait que l'application n'est pas signée avec un certificat officiel (qui coûte plusieurs centaines d'euros par an)."
+                    "text": " Le Divizion Launcher est développé par une équipe de confiance. Les avertissements de sécurité ne sont pas dus à la présence de logiciels malveillants, mais simplement au fait que l'application n'est pas signée avec un certificat officiel (qui coûte plusieurs centaines d'euros par an)."
                 }
             ]
         },
