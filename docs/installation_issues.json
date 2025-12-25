@@ -1,0 +1,547 @@
+{
+    "meta": {
+        "id": "installation-troubleshooting-v1-en",
+        "title": "Divizion Launcher Installation Issues",
+        "subtitle": "Resolving security blocks on macOS and Windows",
+        "description": "Is your system blocking the installation or launch of the Divizion Launcher? This guide explains how to resolve Gatekeeper (macOS) and SmartScreen (Windows) error messages.",
+        "coverImage": "/assets/images/docs/cover-installation.jpg",
+        "author": "Team Divizion",
+        "lastUpdated": "2025-12-25",
+        "tags": [
+            "installation",
+            "troubleshooting",
+            "macOS",
+            "Windows",
+            "security"
+        ]
+    },
+    "blocks": [
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "🍎 macOS - \"The application is damaged\""
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "The Problem"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "When first launching the Divizion Launcher on macOS, you may see one of these error messages:"
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "warning",
+            "title": "Error Message",
+            "content": [
+                {
+                    "text": "\"DivizionLauncher.app\" is damaged and can't be opened. You should move it to the Trash."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "or"
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "warning",
+            "title": "Alternative Error Message",
+            "content": [
+                {
+                    "text": "\"DivizionLauncher.app\" cannot be opened because Apple cannot verify that it doesn't contain malicious software."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Why does this happen?"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "macOS includes a security system called "
+                },
+                {
+                    "text": "Gatekeeper",
+                    "bold": true
+                },
+                {
+                    "text": " that verifies applications are:"
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Gatekeeper Checks",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Signed",
+                    "description": "With a valid Apple Developer certificate"
+                },
+                {
+                    "step_number": 2,
+                    "title": "Notarized",
+                    "description": "Verified by Apple for absence of malware"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "The Divizion Launcher is not currently signed with an official Apple Developer certificate, which triggers these security warnings. "
+                },
+                {
+                    "text": "This does not mean the application is actually corrupted or dangerous",
+                    "bold": true
+                },
+                {
+                    "text": " - it's simply an Apple security measure."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Solution"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Method 1: Via Terminal (Recommended)"
+        },
+        {
+            "type": "step_list",
+            "title": "Terminal Procedure",
+            "description": "This method is the most reliable way to resolve the issue.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Open Terminal",
+                    "description": "Press Cmd + Space to open Spotlight, type \"Terminal\" and press Enter"
+                },
+                {
+                    "step_number": 2,
+                    "title": "Run the command",
+                    "description": "Copy-paste the appropriate command depending on the application location"
+                },
+                {
+                    "step_number": 3,
+                    "title": "Launch the application",
+                    "description": "Double-click the application to launch it normally"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "If the application is in the ",
+                    "bold": true
+                },
+                {
+                    "text": "Applications",
+                    "bold": true
+                },
+                {
+                    "text": " folder:"
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "bash",
+            "content": "xattr -cr /Applications/DivizionLauncher.app",
+            "showCopyButton": true
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "If the application is in the ",
+                    "bold": true
+                },
+                {
+                    "text": "Downloads",
+                    "bold": true
+                },
+                {
+                    "text": " folder:"
+                }
+            ]
+        },
+        {
+            "type": "code",
+            "language": "bash",
+            "content": "xattr -cr ~/Downloads/DivizionLauncher.app",
+            "showCopyButton": true
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Command Explanation",
+            "content": [
+                {
+                    "text": "xattr: Program to manipulate extended file attributes • -c: Removes all extended attributes • -r: Applies recursively to all files in the application. This command removes the \"quarantine\" applied by macOS to downloaded files."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Method 2: Via System Preferences"
+        },
+        {
+            "type": "step_list",
+            "title": "System Preferences Procedure",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Try to open the application",
+                    "description": "The error message will appear"
+                },
+                {
+                    "step_number": 2,
+                    "title": "Open System Preferences",
+                    "description": "Or System Settings on macOS Ventura+"
+                },
+                {
+                    "step_number": 3,
+                    "title": "Go to \"Privacy & Security\"",
+                    "description": "Scroll down - you'll see a message indicating that \"DivizionLauncher\" was blocked"
+                },
+                {
+                    "step_number": 4,
+                    "title": "Click \"Open Anyway\"",
+                    "description": "Enter your password if prompted and confirm by clicking \"Open\""
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Method 3: Right-click"
+        },
+        {
+            "type": "step_list",
+            "title": "Right-click Procedure",
+            "description": "If other methods don't work.",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Locate the application",
+                    "description": "In Finder"
+                },
+                {
+                    "step_number": 2,
+                    "title": "Hold the Control key",
+                    "description": "And click on the application (or right-click)"
+                },
+                {
+                    "step_number": 3,
+                    "title": "Select \"Open\"",
+                    "description": "From the context menu"
+                },
+                {
+                    "step_number": 4,
+                    "title": "Click \"Open\"",
+                    "description": "In the warning dialog"
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "info",
+            "title": "Note",
+            "content": [
+                {
+                    "text": "This procedure is only necessary once. Once the application has been opened for the first time, macOS will remember it and you can launch it normally."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "🪟 Windows - SmartScreen blocks the application"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "The Problem"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "When first launching the Divizion Launcher on Windows, you may see a blue screen with the message:"
+                }
+            ]
+        },
+        {
+            "type": "alert",
+            "variant": "warning",
+            "title": "Windows protected your PC",
+            "content": [
+                {
+                    "text": "Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Why does this happen?"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Windows SmartScreen",
+                    "bold": true
+                },
+                {
+                    "text": " is a protection system that analyzes downloaded files and compares them to a database of known files. It blocks applications that:"
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "SmartScreen Blocking Criteria",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Are not signed",
+                    "description": "With a code signing certificate"
+                },
+                {
+                    "step_number": 2,
+                    "title": "Don't have \"reputation\"",
+                    "description": "Not enough downloads to be considered safe by Microsoft"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Code signing certificates cost several hundred euros per year, and reputation builds over time with the number of downloads. "
+                },
+                {
+                    "text": "The Divizion Launcher is safe",
+                    "bold": true
+                },
+                {
+                    "text": ", but SmartScreen doesn't recognize it yet."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Solution"
+        },
+        {
+            "type": "step_list",
+            "title": "Steps to Bypass SmartScreen",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "When the SmartScreen screen appears",
+                    "description": "Don't click \"Don't run\""
+                },
+                {
+                    "step_number": 2,
+                    "title": "Click \"More info\"",
+                    "description": "This link is in small text below the main warning message"
+                },
+                {
+                    "step_number": 3,
+                    "title": "Click \"Run anyway\"",
+                    "description": "Installation/launch will continue normally"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "If you don't see \"More info\""
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "In some cases (especially on Windows in S mode or with enterprise restrictions), the option may not appear. Try:"
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Alternative Method",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "Right-click on the installation file",
+                    "description": ""
+                },
+                {
+                    "step_number": 2,
+                    "title": "Select \"Properties\"",
+                    "description": ""
+                },
+                {
+                    "step_number": 3,
+                    "title": "In the \"General\" tab",
+                    "description": "Look for the \"Unblock\" checkbox at the bottom"
+                },
+                {
+                    "step_number": 4,
+                    "title": "Check \"Unblock\"",
+                    "description": "And click \"Apply\""
+                },
+                {
+                    "step_number": 5,
+                    "title": "Restart the installation",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "❓ Frequently Asked Questions"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Is the application really safe?"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Yes.",
+                    "bold": true
+                },
+                {
+                    "text": " The Divizion Launcher is an open-source project whose source code is publicly available on GitHub. The security warnings are not due to the presence of malware, but simply because the application is not signed with an official certificate (which costs several hundred euros per year)."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Why not sign the application?"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Code signing requires:"
+                }
+            ]
+        },
+        {
+            "type": "step_list",
+            "title": "Signing Costs",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "On macOS",
+                    "description": "An Apple Developer account (€99/year) + notarization process"
+                },
+                {
+                    "step_number": 2,
+                    "title": "On Windows",
+                    "description": "An EV (Extended Validation) code signing certificate costing €300-500/year"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "These costs are significant for a free community project."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Are these workarounds safe?"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "text": "Yes, these workarounds only tell the operating system that you trust this specific application. They don't disable security protections for other applications."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "text": "Do I need to do this for every update?"
+        },
+        {
+            "type": "step_list",
+            "title": "Behavior by OS",
+            "description": "",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": "macOS",
+                    "description": "Generally no, once the application is unblocked, automatic updates should not cause the issue again."
+                },
+                {
+                    "step_number": 2,
+                    "title": "Windows",
+                    "description": "This may happen again during a major update if the installation file changes significantly."
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 1,
+            "text": "🔗 References"
+        },
+        {
+            "type": "button_group",
+            "alignment": "left",
+            "buttons": [
+                {
+                    "type": "text_icon",
+                    "label": "Apple Gatekeeper Documentation",
+                    "icon": "external-link",
+                    "action": "https://support.apple.com/en-us/HT202491",
+                    "variant": "outline"
+                },
+                {
+                    "type": "text_icon",
+                    "label": "Microsoft SmartScreen Documentation",
+                    "icon": "external-link",
+                    "action": "https://support.microsoft.com/en-us/microsoft-edge/what-is-smartscreen-and-how-can-it-help-protect-me-1c9a874a-6826-be5e-45b1-67fa445a74c8",
+                    "variant": "outline"
+                }
+            ]
+        }
+    ]
+}
